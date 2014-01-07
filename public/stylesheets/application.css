@@ -1,0 +1,64 @@
+#top_cover{
+	top: 0px;
+	position: fixed;
+	width: 100%;
+}
+
+#menu_img {
+	width: 50px;
+	height: 50px;
+}
+
+#dropdown_menu{
+	left: 15px;
+	top: 15px;
+	position: fixed;
+}
+
+#menu_header{
+	top: 19px;
+	position: fixed;
+	width: 100%;
+	background-color: gray;
+}
+
+#menu_header_vert{
+	width: 60px;
+	height: 92px;
+	position: fixed;
+	left: 23px;
+	top: 0px;
+	background-color: gray;
+}
+
+#header_title{
+	text-align: right;
+	font-size: 18;
+	color: white;
+}
+
+#home_jumbo{
+	margin-top: 120px;
+}
+
+#main_jumbo{
+	height: 524px;
+	margin-bottom: 40;
+}
+
+.jumbo_content{
+	margin-top: 100px;
+}
+
+#home_info{
+	width: 100%;
+	height: 605px;
+	margin: 0px;
+	padding: 0px;
+	background-color: black;
+}
+
+#info_well{
+	margin-top: 75px;
+	margin-bottom: 75px;
+}
