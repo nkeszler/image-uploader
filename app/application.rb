@@ -5,6 +5,9 @@ require_relative './routes/init'
 
 class ImageUploader < Sinatra::Application
 
+	enable :sessions
+	set :sesion_secret, 'super_secret'
+
 end
 
 env = ENV["RACK_ENV"] || "development"

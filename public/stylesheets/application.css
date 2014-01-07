@@ -19,7 +19,21 @@
 	top: 19px;
 	position: fixed;
 	width: 100%;
+	height: 55px;
 	background-color: gray;
+	white-space: nowrap;
+}
+
+#menu_header.shrink {
+	transition: all 1s;
+	width: 7%;
+	left: 8px;
+}
+
+#menu_header.grow {
+	transition: all 1s;
+	width: 100%;
+	left: 0px;
 }
 
 #menu_header_vert{
@@ -29,6 +43,18 @@
 	left: 23px;
 	top: 0px;
 	background-color: gray;
+}
+
+#menu_header_vert.shrink{
+	transition: all 1s;
+	height: 78px;
+	top: 8px;
+}
+
+#menu_header_vert.grow{
+	transition: all 1s;
+	height: 92px;
+	top: 0px;
 }
 
 #header_title{
