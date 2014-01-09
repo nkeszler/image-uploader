@@ -8,8 +8,12 @@ class User
 	validates_uniqueness_of :email, message: "This email is already in use"
 
 	property :id, Serial
+	property :first_name, String
+	property :last_name, String
 	property :email, String, unique: true, message: "This email is already in use"
 	property :password_digest, Text
+
+	has n, :photos
 
 	attr_reader :password
 	attr_accessor :password_confirmation

@@ -6,31 +6,39 @@
     <link href="/stylesheets/application.css" rel="stylesheet">
 	</head>
 	<body>
-<!-- 		<div class="panel panel-default" id="top_cover">
-			<div class="panel-body">
-  		</div>
-		</div> -->
-		<div class="panel panel-default" id="menu_header_vert">
-			<div class="panel-body">
-  		</div>
-		</div>
-		<div class="panel panel-default" id="menu_header">
-			<div class="panel-body" id="header_title">
-    		Image Uploader
-  		</div>
-		</div>
-		<div class="btn-group" id="dropdown_menu">
-	  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-	    	<img src="/images/Menu.png" id="menu_img">
-	    	<!-- <span class="caret"></span> -->
-	  	</button>
-	  	<ul class="dropdown-menu" role="menu">
-	    	<li><a href="#">Action</a></li>
-	    	<li><a href="#">Another action</a></li>
-	    	<li><a href="#">Something else here</a></li>
-	    	<li class="divider"></li>
-	    	<li><a href="#">Separated link</a></li>
-  		</ul>
+		<div id="full_nav_bar">
+			<div class="panel panel-default" id="menu_header_vert">
+				<div class="panel-body">
+	  		</div>
+			</div>
+			<% if current_user %>
+				<form id='log-out-form' method='post' action='users/logout'>
+					<button id="log-out-nav-btn" type="submit" class="btn btn-default btn-xs log-button" >Log out</button>
+					<input type='hidden' name="_method" value="delete">
+				</form>
+			<% else%>
+				<button id="log-in-nav-btn" type="button" class="btn btn-default btn-xs log-button" data-toggle='modal' data-target='#logInModal'>Log in</button>
+				<h6 id='header-bar' class='log-button'>|</h6>
+				<button id="sign-up-nav-btn" type="button" class="btn btn-default btn-xs log-button" data-toggle="modal" data-target="#myModal">Sign up</button>
+			<% end %>
+			<div class="panel panel-default" id="menu_header">
+				<div class="panel-body" id="header_title">
+	    		Image Uploader
+	  		</div>
+			</div>
+			<div class="btn-group" id="dropdown_menu">
+		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+		    	<img src="/images/Menu.png" id="menu_img">
+		    	<!-- <span class="caret"></span> -->
+		  	</button>
+		  	<ul class="dropdown-menu" role="menu">
+		    	<li><a href="/">Home</a></li>
+		    	<li><a href="#">Another action</a></li>
+		    	<li><a href="#">Something else here</a></li>
+		    	<li class="divider"></li>
+		    	<li><a href="#">Separated link</a></li>
+	  		</ul>
+			</div>
 		</div>
 		<%= yield %>
 		<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
